@@ -4,7 +4,7 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
-    private int size;
+    int size;
 
     //default size of LinkedList
     LinkedList(){
@@ -63,6 +63,60 @@ public class LinkedList {
         traverser.next = node;
         size++;
     }
+
+
+    //MyLogic -
+
+    // //inserting at any given position
+    // public void insert(int val, int index){
+    //     if(index == 0){
+    //         insertFirst(val);
+    //         return;
+    //     }
+
+    //     if(index == size){
+    //         insertLast(val);
+    //         return;
+    //     }
+
+    //     Node node = new Node(val);
+    //     Node temp = head;
+    //     int i = 0;
+    //     while(i < index - 1){
+    //         temp = temp.next;
+    //         i++;
+    //     }
+    //     node.next = temp.next;
+    //     temp.next = node;
+    //     size++;
+    // }
+
+    //inserting at any position
+
+    public void insert(int val, int index){
+        if(index == 0){
+            insertFirst(val);
+            return;
+        }
+
+        if(index == size){
+            insertLast(val);
+            return;
+        }
+
+        Node temp = head;
+
+        for(int i = 1; i < index; i++){
+            temp = temp.next;
+        }
+
+        Node node = new Node(val, temp.next);
+        temp.next = node;
+
+        size++;
+
+    }
+
 
     private class Node{
         private int value;
