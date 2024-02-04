@@ -11,5 +11,9 @@ public class Main {
         // list.display();
         list.insertWithoutTail(87);
         list.display();
+        list.insert(35, 2);
+        list.display();
     }
 }
+
+
