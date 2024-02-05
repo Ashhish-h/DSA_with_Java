@@ -127,6 +127,16 @@ public class LinkedList {
 
     }
 
+    //deleting first node of the linkedlist
+    public int deleteFirst(){
+        int val = head.value;
+        head = head.next;
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return val;
+    }
 
     private class Node{
         private int value;
