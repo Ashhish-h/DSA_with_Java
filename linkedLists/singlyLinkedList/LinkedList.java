@@ -4,7 +4,17 @@ public class LinkedList {
     private Node head;
     private Node tail;
 
-    int size;
+    private int size;
+
+    //to check if linkedlist is empty or not
+    boolean isEmpty(){
+        return size == 0;
+    }
+
+    //to get the size of the linkedlist
+    public int size(){
+        return size;
+    }
 
     //default size of LinkedList
     LinkedList(){
@@ -44,7 +54,7 @@ public class LinkedList {
             System.out.print(traverser.value + " -> ");
             traverser = traverser.next;
         }
-        System.out.print("End");
+        System.out.println("End");
     }
 
     //inserting in a list without using tail
