@@ -13,6 +13,9 @@ public class Main {
         list.display();
         list.insert(35, 2);
         list.display();
+
+        boolean empty = list.isEmpty();
+        System.out.println(empty);
     }
 }
 
