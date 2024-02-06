@@ -138,6 +138,26 @@ public class LinkedList {
         return val;
     }
 
+    //delete last node of the linkedlist
+    public int deleteLast(){
+        //for this will will use two pointer approach
+        Node traverser = head;
+        Node nextTraverser = traverser.next;
+        while(nextTraverser.next != null){
+            traverser = nextTraverser;
+            nextTraverser = nextTraverser.next;
+        }
+        int val = traverser.next.value;
+        traverser.next = null;
+        size--;
+
+        if(tail == null){
+            head = null;
+        }
+
+        return val;
+    }
+
     private class Node{
         private int value;
         private Node next;
