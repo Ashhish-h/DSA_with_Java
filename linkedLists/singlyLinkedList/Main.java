@@ -15,15 +15,23 @@ public class Main {
         // list.display();
 
         list.insert(35, 2);
-        list.display();
-
-        System.out.println(list.deleteFirst());
-
         boolean empty = list.isEmpty();
-        System.out.println(empty);
+        System.out.println("is linkedlist empty " + empty);
 
         int size = list.size();
-        System.out.println(size);
+        System.out.println("size of the linkedlist " + size);
+
+        System.out.print("Nodes of linkedlist are: ");
+        list.display();
+
+        System.out.println("deleted first node of the linkedlist " + list.deleteFirst());
+        
+        list.display();
+
+        System.out.println("deleted last node of the linkedlist " + list.deleteLast());
+
+        list.display();
+
 
         
     }
