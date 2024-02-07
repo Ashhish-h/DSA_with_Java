@@ -32,6 +32,10 @@ public class Main {
 
         list.display();
 
+        System.out.println("deleted node of a linkedlist is " + list.delete(3));
+
+        list.display();
+
 
         
     }
