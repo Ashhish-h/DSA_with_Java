@@ -172,30 +172,40 @@ public class LinkedList {
         return val;
     }
 
-    //this method is used to search any node in a linked list if it exist it will return its index(position).
-    public int search(int val){
+    // //this method is used to search any node in a linked list if it exist it will return its index(position).
+    // public int search(int val){
         
-        if(isEmpty()){
-            return -1;
-        }
+    //     if(isEmpty()){
+    //         return -1;
+    //     }
 
-        if(val == head.value){
-            return 0;
-        }
+    //     if(val == head.value){
+    //         return 0;
+    //     }
 
-        if(val == tail.value){
-            return size;
-        }
+    //     if(val == tail.value){
+    //         return size;
+    //     }
 
-        Node current = head;
-        int index = 0;
-        while(current.next.value != val){
-            current = current.next;
-            index++;
-        }
+    //     Node current = head;
+    //     int index = 0;
+    //     while(current.next.value != val){
+    //         current = current.next;
+    //         index++;
+    //     }
 
-        return index + 1;
-    }
+    //     return index + 1;
+    // }
+
+        public Node search(int val){
+            Node currentNode = head;
+            while(currentNode != null){
+                if(currentNode.value == val){
+                    return currentNode;
+                }
+            }
+            return null; // if node is not found
+        }
 
 
     // Node class
