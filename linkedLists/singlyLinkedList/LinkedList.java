@@ -168,9 +168,34 @@ public class LinkedList {
         }
         int val = traverser.next.value;
         traverser.next = nextTraverser.next;
+        size--;
         return val;
     }
 
+    //this method is used to search any node in a linked list if it exist it will return its index(position).
+    public int search(int val){
+        
+        if(isEmpty()){
+            return -1;
+        }
+
+        if(val == head.value){
+            return 0;
+        }
+
+        if(val == tail.value){
+            return size;
+        }
+
+        Node current = head;
+        int index = 0;
+        while(current.next.value != val){
+            current = current.next;
+            index++;
+        }
+
+        return index + 1;
+    }
 
 
     // Node class
