@@ -158,6 +158,22 @@ public class LinkedList {
         return val;
     }
 
+    //deleting anygiven node
+    public int delete(int index){
+        Node traverser = head;
+        Node nextTraverser = traverser.next;
+        for(int i = 0; i < index - 2; i++){
+            traverser = nextTraverser;
+            nextTraverser = nextTraverser.next;
+        }
+        int val = traverser.next.value;
+        traverser.next = nextTraverser.next;
+        return val;
+    }
+
+
+
+    // Node class
     private class Node{
         private int value;
         private Node next;
