@@ -9,12 +9,14 @@ public class Main {
         // list.display();
 
         list.insertLast(90);
+        list.insertLast(80);
+        list.insertLast(100);
         // list.display();
 
-        list.insertWithoutTail(87);
+        // list.insertWithoutTail(87);
         // list.display();
 
-        list.insert(35, 2);
+        // list.insert(35, 2);
         boolean empty = list.isEmpty();
         System.out.println("is linkedlist empty " + empty);
 
@@ -24,17 +26,19 @@ public class Main {
         System.out.print("Nodes of linkedlist are: ");
         list.display();
 
-        System.out.println("deleted first node of the linkedlist " + list.deleteFirst());
+        // System.out.println("deleted first node of the linkedlist " + list.deleteFirst());
         
-        list.display();
+        // list.display();
 
-        System.out.println("deleted last node of the linkedlist " + list.deleteLast());
+        // System.out.println("deleted last node of the linkedlist " + list.deleteLast());
 
-        list.display();
+        // list.display();
 
-        System.out.println("deleted node of a linkedlist is " + list.delete(3));
+        // System.out.println("deleted node of a linkedlist is " + list.delete(3));
 
-        list.display();
+        // list.display();
+
+        System.out.println("position of the node in the linkedList is " + list.search(80));
 
 
         
