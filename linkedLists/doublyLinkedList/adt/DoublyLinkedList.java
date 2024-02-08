@@ -10,13 +10,9 @@ public interface DoublyLinkedList {
 
     public void addFirst(int val);
 
-    public void addLast(int val);
-
-    public void add(int val, int index);
+    public void add(int val);
 
     public int removeFirst();
-
-    public int removeLast();
 
     public int remove(int index);
 
