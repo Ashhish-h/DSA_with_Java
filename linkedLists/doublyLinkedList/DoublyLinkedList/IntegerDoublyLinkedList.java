@@ -19,8 +19,10 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
 
     @Override
     public void addFirst(int val) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addFirst'");
+        Node node = new Node(val, head, tail);
+        head = node;
+        tail = node;
+        size++;
     }
 
     @Override
