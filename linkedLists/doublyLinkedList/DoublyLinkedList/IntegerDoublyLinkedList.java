@@ -5,8 +5,8 @@ import linkedLists.doublyLinkedList.node.Node;
 
 public class IntegerDoublyLinkedList implements DoublyLinkedList {
     private int size = 0;
-    private Node head;
-    private Node tail;
+    Node head;
+    Node tail;
     @Override
     public boolean isEmpty() {
         return size == 0;
@@ -44,15 +44,19 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
     }
 
     @Override
-    public int search(int val) {
+    public Node search() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'search'");
     }
 
     @Override
-    public Node search() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'search'");
+    public void print() {
+        Node current = head;
+        while(current != null){
+            System.out.print(current.value + " -> ");
+            current = current.next;
+        }
+        System.out.println("End");
     }
     
 }
