@@ -2,9 +2,9 @@ package linkedLists.doublyLinkedList.node;
 
 public class Node {
 
-    private int value;
-    private Node next;
-    private Node previous; 
+    public int value;
+    public Node next;
+    public Node previous; 
 
     public Node(int value){
         this.value = value;
