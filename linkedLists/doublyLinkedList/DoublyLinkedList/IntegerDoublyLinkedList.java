@@ -4,9 +4,10 @@ import linkedLists.doublyLinkedList.adt.DoublyLinkedList;
 import linkedLists.doublyLinkedList.node.Node;
 
 public class IntegerDoublyLinkedList implements DoublyLinkedList {
-    private int size = 0;
-    Node head;
-    Node tail;
+    int size = 0;
+    public Node head;
+    public Node tail;
+
     @Override
     public boolean isEmpty() {
         return size == 0;
@@ -14,7 +15,7 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
 
     @Override
     public int size() {
-        return size;
+        return this.size;
     }
 
     @Override
@@ -101,10 +102,10 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
     public void print() {
         Node currentNode = head;
 		while (currentNode != null) {
-			System.out.print(currentNode);
+			System.out.print(currentNode.value + " -> ");
 			currentNode = currentNode.next;
 		}
-        System.out.println();
+        System.out.println("End");
     }
     
 }
