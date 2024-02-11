@@ -86,9 +86,15 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
     }
 
     @Override
-    public Node search() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'search'");
+    public Node search(int val) {
+        Node currentNode = head;
+		while (currentNode != null) {
+			if (currentNode.value == val) {
+				return currentNode;
+			}
+			currentNode = currentNode.next;
+		}
+		return null; // data not found
     }
 
     @Override
