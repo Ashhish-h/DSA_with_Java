@@ -4,10 +4,22 @@ import linkedLists.doublyLinkedList.DoublyLinkedList.IntegerDoublyLinkedList;
 import linkedLists.doublyLinkedList.node.Node;
 
 public class CircularLinkedList extends IntegerDoublyLinkedList {
+
     public void makeCircular() {
 		if (head != null) {
 			tail.next = head;
 			head.previous = tail;
 		}
+	}
+
+    public void add(int data) {
+		super.add(data);
+		makeCircular();
+	}
+
+    public int remove(int data) {
+		int removed = super.remove(data);
+		makeCircular();
+		return removed;
 	}
 }
