@@ -3,6 +3,7 @@ package linkedLists.circularLinkedList;
 import linkedLists.doublyLinkedList.DoublyLinkedList.IntegerDoublyLinkedList;
 import linkedLists.doublyLinkedList.node.Node;
 
+
 public class CircularLinkedList extends IntegerDoublyLinkedList {
 
     public void makeCircular() {
@@ -27,7 +28,7 @@ public class CircularLinkedList extends IntegerDoublyLinkedList {
 		Node currentNode = head;
 		if (currentNode != null) { // Check for empty list
 			do {
-				System.out.print(currentNode);
+				System.out.print(currentNode.value);
 				currentNode = currentNode.next;
 			} while (currentNode != head); // Loop until reaching the head again
 		}
