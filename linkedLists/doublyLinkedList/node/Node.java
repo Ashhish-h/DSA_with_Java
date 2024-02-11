@@ -10,19 +10,10 @@ public class Node {
         this.value = value;
     }
 
-    public Node(int value, Node next, Node previous){
+    public Node(int value, Node previous, Node next){
         this.value = value;
-        this.next = next;
         this.previous = previous;
-    }
-    
-    @Override
-	public String toString() {
-		return "{"
-				+ (previous == null ? "null" : previous.value)
-				+ " <--> " + this.value + " <--> "
-				+ (next == null ? "null" : next.value)
-				+ "}";
+        this.next = next;
     }
 
 }
