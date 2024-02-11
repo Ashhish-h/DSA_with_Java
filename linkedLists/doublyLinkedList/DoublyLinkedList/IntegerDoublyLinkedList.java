@@ -39,8 +39,16 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
 
     @Override
     public int removeFirst() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'removeFirst'");
+        int removedData = head.value;
+		if (head == tail) { // there is only one node in the list
+			head = null;
+			tail = null;
+		} else {
+			head = head.next;
+			head.previous = null;
+		}
+		size--;
+		return removedData;
     }
 
     @Override
