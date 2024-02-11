@@ -14,9 +14,9 @@ public interface DoublyLinkedList {
 
     public int removeFirst();
 
-    public int remove(int index);
+    public int remove(int val);
 
-    public Node search();
+    public Node search(int val);
 
     public void print();
 
