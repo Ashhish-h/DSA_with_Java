@@ -52,9 +52,37 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
     }
 
     @Override
-    public int remove(int index) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+    public int remove(int val) {
+        if (isEmpty()) {
+			// if there is no node in the list, return -214748364
+			return Integer.MIN_VALUE;
+		}
+		
+		Node current = head;
+		
+		while (current != null && current.value != val) {
+			current = current.next;
+		}
+		
+		if (current == null) {
+			return Integer.MAX_VALUE; // Data not found
+		}
+		
+		if (current == head) {
+			return removeFirst(); // Use removeFirst() for the head node
+		}
+		
+		current.previous.next = current.next;
+		
+		if (current == tail) { // If removing the tail
+			tail = current.previous;
+		} else {
+			current.next.previous = current.previous;
+		}
+		
+		size--;
+		return current.value;
+
     }
 
     @Override
