@@ -20,15 +20,21 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
     @Override
     public void addFirst(int val) {
         Node node = new Node(val, head, tail);
-        head = node;
-        tail = node;
-        size++;
+		head = node;
+		tail = node;
+		size++;
     }
 
     @Override
     public void add(int val) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+        if (this.isEmpty()) {
+			addFirst(val);
+		} else {
+			Node node = new Node(val, tail, null);
+			tail.next = node;
+			tail = node;
+			size++;
+		}
     }
 
     @Override
@@ -51,12 +57,12 @@ public class IntegerDoublyLinkedList implements DoublyLinkedList {
 
     @Override
     public void print() {
-        Node current = head;
-        while(current != null){
-            System.out.print(current.value + " -> ");
-            current = current.next;
-        }
-        System.out.println("End");
+        Node currentNode = head;
+		while (currentNode != null) {
+			System.out.print(currentNode);
+			currentNode = currentNode.next;
+		}
+        System.out.println();
     }
     
 }
