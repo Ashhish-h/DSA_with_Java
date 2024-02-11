@@ -22,4 +22,15 @@ public class CircularLinkedList extends IntegerDoublyLinkedList {
 		makeCircular();
 		return removed;
 	}
+
+    public void print() {
+		Node currentNode = head;
+		if (currentNode != null) { // Check for empty list
+			do {
+				System.out.print(currentNode);
+				currentNode = currentNode.next;
+			} while (currentNode != head); // Loop until reaching the head again
+		}
+	}
+
 }
