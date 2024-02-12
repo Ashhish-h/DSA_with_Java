@@ -1,6 +1,6 @@
 package stacks.stacks;
 
-public class Stacks {
+public class Stack {
 
     int size; //size of the stack
 
