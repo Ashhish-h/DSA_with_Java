@@ -1,4 +1,4 @@
-package stackesandqueue.stacks;
+package stacks.stacks;
 
 public class Stacks {
 
@@ -16,6 +16,12 @@ public class Stacks {
         return size;
     }
 
+    public void push(int data){
+        Node node = new Node(data);
+        node.next = top;
+        top = node;
+        size++;
+    }
 
 
 
