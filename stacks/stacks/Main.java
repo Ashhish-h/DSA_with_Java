@@ -7,5 +7,9 @@ public class Main {
         stack.push(85);
         stack.push(78);
         stack.push(99);
+        System.out.println(stack.isUnderflow());
+
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
     }
 }
