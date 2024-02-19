@@ -32,14 +32,22 @@ public class Stack {
         Node poppedNode = top;
         top = top.next;
         size--;
-        return poppedNode.data;
+        return poppedNode.value;
+    }
+
+    //peek() method to peek top data
+    public int peek(){
+        if(isUnderflow()){
+            System.err.println("stack underflow");
+            return Integer.MIN_VALUE;
+        }
+        return top.value;
     }
 
 
 
 
-
-
+    
     //Node class defination for stack
     static class Node{
         int value;
