@@ -1,4 +1,4 @@
-package stacks.stacks;
+     package stacks.stacks;
 
 public class Stack {
 
@@ -21,6 +21,18 @@ public class Stack {
         node.next = top;
         top = node;
         size++;
+    }
+
+    //deleting data from the stack (pop() method)
+    public int pop(){
+        if(isUnderflow()){
+            System.err.println("stack underflow");
+            return Integer.MIN_VALUE;
+        }
+        Node poppedNode = top;
+        top = top.next;
+        size--;
+        return poppedNode.data;
     }
 
 
