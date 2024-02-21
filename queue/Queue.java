@@ -5,15 +5,8 @@ public class Queue {
     public QueueNode rear;
     public int size;
 
-    
-
-    public static class QueueNode{
-        int value;
-        QueueNode next;
-        public QueueNode(int value){
-            this.value = value;
-            this.next = null;
-        }
-
+    //offer method to add nodes in Queue
+    public void offer(int data){
+        
     }
 }
