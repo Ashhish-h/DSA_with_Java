@@ -1,4 +1,6 @@
-package stacks.stacks;
+package stacks;
+
+import stacks.stacks.Stack;
 
 public class Main {
     public static void main(String[] args){

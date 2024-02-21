@@ -1,4 +1,6 @@
-     package stacks.stacks;
+package stacks.stacks;
+
+import stacks.node.Node;
 
 public class Stack {
 
@@ -7,7 +9,7 @@ public class Stack {
     Node top; //Node pointing to the top element of the stack
 
     // Method to check is stack is empty or not
-    boolean isUnderflow(){
+    public boolean isUnderflow(){
         return size == 0;
     }
 
@@ -38,32 +40,10 @@ public class Stack {
     //peek() method to peek top data
     public int peek(){
         if(isUnderflow()){
-            System.err.println("stack underflow");
+            System.out.println("Stack Underflow");
             return Integer.MIN_VALUE;
         }
         return top.value;
     }
 
-
-
-
-    
-    //Node class defination for stack
-    static class Node{
-        int value;
-
-        Node next;
-
-        public Node(int value){
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "value=" + value +
-                    ", next=" + next +
-                    '}';
-        }
-    }
 }
