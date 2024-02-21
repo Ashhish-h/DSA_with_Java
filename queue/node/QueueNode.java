@@ -1,4 +1,4 @@
-package queue;
+package queue.node;
 
 public class QueueNode {
     public int value;

@@ -1,5 +1,7 @@
 package queue;
 
+import queue.node.QueueNode;
+
 public class Queue {
     public QueueNode front;
     public QueueNode rear;
@@ -17,6 +19,14 @@ public class Queue {
 
     //offer method to add nodes in Queue
     public void offer(int data){
-
+        if(isEmpty()){
+            front = rear = new QueueNode(data);
+        }
+        QueueNode node = new QueueNode(data);
+        node.next = rear;
+        rear = node;
+        size++;
     }
+
+    
 }
