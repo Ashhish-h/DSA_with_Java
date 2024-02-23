@@ -28,5 +28,25 @@ public class Queue {
         size++;
     }
 
+    public int remove(){
+        if(isEmpty()){
+            System.err.println("Queue is Empty");
+            return Integer.MIN_VALUE;
+        }
+        int removed = front.value;
+        front = front.next;
+        size--;
+        return removed;
+    }
+
+    //peek() method
+    public int peek(){
+        if(isEmpty()){
+            System.err.println("Queue is Empty");
+            return Integer.MIN_VALUE;
+        }
+        return front.value;
+    }
+
     
 }
