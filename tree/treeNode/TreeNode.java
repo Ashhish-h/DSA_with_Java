@@ -12,5 +12,9 @@ public class TreeNode {
        this.rightNode = null; 
     }
 
+    //toString for Node class
+    public String toString() {
+		return "TreeNode{" + "data=" + data + ", leftNode=" + leftNode + ", rightNode=" + rightNode + '}';
+	}
 
 }
