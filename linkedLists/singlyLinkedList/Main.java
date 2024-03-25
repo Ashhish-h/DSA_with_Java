@@ -26,19 +26,19 @@ public class Main {
         System.out.print("Nodes of linkedlist are: ");
         list.display();
 
-        // System.out.println("deleted first node of the linkedlist " + list.deleteFirst());
+        System.out.println("deleted first node of the linkedlist " + list.deleteFirst());
         
         // list.display();
 
         // System.out.println("deleted last node of the linkedlist " + list.deleteLast());
 
-        // list.display();
+        // list.disp//lay();
 
         // System.out.println("deleted node of a linkedlist is " + list.delete(3));
 
         // list.display();
 
-        System.out.println("position of the node in the linkedList is " + list.search(80));
+        // System.out.println("position of the node in the linkedList is " + list.search(80));
 
 
         
