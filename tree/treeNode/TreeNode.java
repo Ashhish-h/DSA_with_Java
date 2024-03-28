@@ -2,8 +2,8 @@ package tree.treeNode;
 
 public class TreeNode {
     int data;
-    TreeNode leftNode;
-    TreeNode rightNode;
+    public TreeNode leftNode;
+    public TreeNode rightNode;
 
     //constructor
     public TreeNode(int data){
