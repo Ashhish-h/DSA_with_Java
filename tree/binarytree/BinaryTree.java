@@ -51,11 +51,9 @@ public class BinaryTree {
       }
       System.out.println("|------->" + node.data);
     } else {
-      System.out.println()
+      System.out.println(node.data);
     }
-
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'printTree'");
+    printTree(node.leftNode, level + 1);
   }
 
 }
