@@ -21,6 +21,16 @@ public class BinaryTree {
       System.out.println("Enter the value of the node");
       int value = scanner.nextInt();
       node.leftNode = new TreeNode(value);
+      insert(scanner, node.leftNode);
+    }
+
+    System.out.println("Do you want to inser rightNode");
+    boolean rightNode = scanner.nextBoolean();
+    if(rightNode){
+      System.out.println("Enter the value of node");
+      int value = scanner.nextInt();
+      node.rightNode = new TreeNode(value);
+      insert(scanner, node.rightNode);
     }
   }
 }
