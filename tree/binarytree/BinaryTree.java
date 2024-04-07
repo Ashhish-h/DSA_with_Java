@@ -33,4 +33,29 @@ public class BinaryTree {
       insert(scanner, node.rightNode);
     }
   }
+
+  public void printTree(){
+    printTree(rootNode, 0);
+  }
+
+  private void printTree(TreeNode node, int level) {
+    if(node == null){
+      return;
+    }
+
+    printTree(node.rightNode, level + 1);
+
+    if(level != 0){
+      for(int i = 0; i < level - 1; i++){
+        System.out.print("|\t\t");
+      }
+      System.out.println("|------->" + node.data);
+    } else {
+      System.out.println()
+    }
+
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'printTree'");
+  }
+
 }

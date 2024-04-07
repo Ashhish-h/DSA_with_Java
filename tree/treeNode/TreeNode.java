@@ -1,7 +1,7 @@
 package tree.treeNode;
 
 public class TreeNode {
-    int data;
+    public int data;
     public TreeNode leftNode;
     public TreeNode rightNode;
 
