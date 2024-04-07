@@ -15,7 +15,7 @@ public class BinaryTree {
   }
 
   private void insert(Scanner scanner, TreeNode node){
-    System.out.println("Do yoou want to insert leftNode");
+    System.out.println("Do you want to insert leftNode");
     boolean leftNode = scanner.nextBoolean();
     if(leftNode){
       System.out.println("Enter the value of the node");
@@ -24,7 +24,7 @@ public class BinaryTree {
       insert(scanner, node.leftNode);
     }
 
-    System.out.println("Do you want to inser rightNode");
+    System.out.println("Do you want to insert rightNode");
     boolean rightNode = scanner.nextBoolean();
     if(rightNode){
       System.out.println("Enter the value of node");
@@ -54,6 +54,7 @@ public class BinaryTree {
       System.out.println(node.data);
     }
     printTree(node.leftNode, level + 1);
+
   }
 
 }
