@@ -27,4 +27,11 @@ public class BinarySearchTree {
             this.rootNode.rightNode = null;
         }
     }
+
+    public boolean isLeafNode(TreeNode node){
+        if(node == null){
+            return true;
+        }
+        return node.leftNode == null & node.rightNode == null;
+    }
 }
