@@ -4,6 +4,7 @@ import tree.treeNode.TreeNode;
 
 public class BinarySearchTree {
     TreeNode rootNode;
+    
 
     public BinarySearchTree(){
         this.rootNode = null;
@@ -33,5 +34,17 @@ public class BinarySearchTree {
             return true;
         }
         return node.leftNode == null & node.rightNode == null;
+    }
+
+    public BinarySearchTree getLeftSubTree(){
+        if(this.rootNode != null && this.rootNode.leftNode != null){
+            return new BinarySearchTree(this.rootNode.leftNode);
+        } else return null;
+    }
+
+    public BinarySearchTree getRightSubTree(){
+        if(this.rootNode != null && this.rootNode.rightNode != null){
+            return new BinarySearchTree(this.rootNode.rightNode);
+        } else return null;
     }
 }
