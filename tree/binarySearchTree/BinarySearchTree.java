@@ -47,4 +47,19 @@ public class BinarySearchTree {
             return new BinarySearchTree(this.rootNode.rightNode);
         } else return null;
     }
+
+    public TreeNode insert(TreeNode root, int value){
+        if(root == null){
+            root = new TreeNode(value);
+            return root;
+        }
+
+        if(root.data > value){
+            root.leftNode = insert(root.leftNode, value);
+        } else {
+            root.rightNode = insert(root.rightNode, value);
+        }
+
+        return root;
+    }
 }
