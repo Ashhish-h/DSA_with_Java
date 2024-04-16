@@ -71,4 +71,22 @@ public class BinarySearchTree {
         System.out.print(rootNode.data + " ");
         inOrderTraversal(rootNode.rightNode);
     }
+
+    public TreeNode search(int key){
+        TreeNode currentNode = this.rootNode;
+        if(currentNode == null){
+            return new TreeNode(Integer.MAX_VALUE);
+        }
+        while(currentNode.data != key){
+            if(currentNode.data < key){
+                currentNode = currentNode.leftNode;
+            } else {
+                currentNode = currentNode.rightNode;
+            }
+            if(currentNode == null){
+                return new TreeNode(Integer.MAX_VALUE);
+            }
+        }
+        return currentNode;
+    }
 }
