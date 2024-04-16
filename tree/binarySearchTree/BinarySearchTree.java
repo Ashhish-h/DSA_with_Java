@@ -62,4 +62,12 @@ public class BinarySearchTree {
 
         return root;
     }
+
+    public void inOrderTraversal(TreeNode rootNode){
+        if(rootNode != null){
+            inOrderTraversal(rootNode.leftNode);
+            System.out.println(rootNode.data);
+            inOrderTraversal(rootNode.rightNode);
+        }
+    }
 }
