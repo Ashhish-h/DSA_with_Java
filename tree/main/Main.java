@@ -21,6 +21,9 @@ public class Main {
         }
 
         binarySearchTree.inOrderTraversal(root);
+        System.out.println();
+        TreeNode searchedNode = binarySearchTree.search(7);
+        System.out.println(searchedNode.data);
 
     }
 }
