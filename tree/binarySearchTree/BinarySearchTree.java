@@ -74,19 +74,15 @@ public class BinarySearchTree {
 
     public TreeNode search(int key){
         TreeNode currentNode = this.rootNode;
-        if(currentNode == null){
-            return new TreeNode(Integer.MAX_VALUE);
+        while (currentNode != null) {
+        if (currentNode.data == key) {
+            return currentNode; // Node found
+        } else if (key < currentNode.data) {
+            currentNode = currentNode.leftNode;
+        } else {
+            currentNode = currentNode.rightNode;
         }
-        while(currentNode.data != key){
-            if(currentNode.data < key){
-                currentNode = currentNode.leftNode;
-            } else {
-                currentNode = currentNode.rightNode;
-            }
-            if(currentNode == null){
-                return new TreeNode(Integer.MAX_VALUE);
-            }
-        }
-        return currentNode;
+    }
+    return null; // Node not found
     }
 }
