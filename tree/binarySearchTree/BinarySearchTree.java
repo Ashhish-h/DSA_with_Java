@@ -3,7 +3,7 @@ package tree.binarySearchTree;
 import tree.treeNode.TreeNode;
 
 public class BinarySearchTree {
-    TreeNode rootNode;
+    public TreeNode rootNode;
     
 
     public BinarySearchTree(){
