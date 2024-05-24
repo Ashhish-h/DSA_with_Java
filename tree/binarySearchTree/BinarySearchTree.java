@@ -47,4 +47,32 @@ public class BinarySearchTree {
             return new BinarySearchTree(this.rootNode.rightNode);
         } else return null;
     }
+
+    public void insert(int data){
+        TreeNode node = new TreeNode(data);
+
+        if(rootNode == null){
+            rootNode = node;
+            return;
+        }
+
+        TreeNode current = rootNode;
+        TreeNode parent = null;
+        while(true){
+            parent = current;
+            if(data < current.data){
+                current = current.leftNode;
+                if(current == null){
+                    parent.leftNode =  node;
+                    return;
+                }
+            } else {
+                current = current.rightNode;
+                if(current == null){
+                    parent.rightNode = node;
+                    return;
+                }
+            }
+        }
+    }
 }
