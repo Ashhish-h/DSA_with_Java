@@ -48,32 +48,41 @@ public class BinarySearchTree {
         } else return null;
     }
 
-    public void insert(int data){
-        TreeNode node = new TreeNode(data);
+    public TreeNode insert(TreeNode root, int value){
+        if(root == null){
+            root = new TreeNode(value);
+            return root;
+        }
 
+        if(root.data > value){
+            root.leftNode = insert(root.leftNode, value);
+        } else {
+            root.rightNode = insert(root.rightNode, value);
+        }
+
+        return root;
+    }
+
+    public void inOrderTraversal(TreeNode rootNode){
         if(rootNode == null){
-            rootNode = node;
             return;
         }
+        inOrderTraversal(rootNode.leftNode);
+        System.out.print(rootNode.data + " ");
+        inOrderTraversal(rootNode.rightNode);
+    }
 
-        TreeNode current = rootNode;
-        TreeNode parent = null;
-        while(true){
-            parent = current;
-            if(data < current.data){
-                current = current.leftNode;
-                if(current == null){
-                    parent.leftNode =  node;
-                    return;
-                }
-            } else {
-                current = current.rightNode;
-                if(current == null){
-                    parent.rightNode = node;
-                    return;
-                }
-            }
+    public TreeNode search(int key){
+        TreeNode currentNode = this.rootNode;
+        while (currentNode != null) {
+        if (currentNode.data == key) {
+            return currentNode; // Node found
+        } else if (key < currentNode.data) {
+            currentNode = currentNode.leftNode;
+        } else {
+            currentNode = currentNode.rightNode;
         }
     }
-    
+    return null; // Node not found
+    }
 }
