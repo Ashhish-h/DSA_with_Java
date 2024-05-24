@@ -48,19 +48,48 @@ public class BinarySearchTree {
         } else return null;
     }
 
-    public TreeNode insert(TreeNode root, int value){
-        if(root == null){
-            root = new TreeNode(value);
-            return root;
+    // public TreeNode insert(TreeNode root, int value){
+    //     if(root == null){
+    //         root = new TreeNode(value);
+    //         return root;
+    //     }
+
+    //     if(root.data > value){
+    //         root.leftNode = insert(root.leftNode, value);
+    //     } else {
+    //         root.rightNode = insert(root.rightNode, value);
+    //     }
+
+    //     return root;
+    // }
+
+    public void insert(int data){
+        TreeNode node = new TreeNode(data);
+
+        if(rootNode == null){
+            rootNode = node;
+            return;
+        }
+        TreeNode current = rootNode;
+        TreeNode parent = null;
+        while(true){
+            parent = current;
+            if(data < current.data){
+                current = current.leftNode;
+                if(current == null){
+                    parent.leftNode = node;
+                    return;
+                }
+            } else {
+                current = current.rightNode;
+                if(current == null){
+                    parent.rightNode = node;
+                    return;
+                }
+            }
         }
 
-        if(root.data > value){
-            root.leftNode = insert(root.leftNode, value);
-        } else {
-            root.rightNode = insert(root.rightNode, value);
-        }
-
-        return root;
+        
     }
 
     public void inOrderTraversal(TreeNode rootNode){
