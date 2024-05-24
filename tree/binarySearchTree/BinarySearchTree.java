@@ -114,4 +114,37 @@ public class BinarySearchTree {
     }
     return null; // Node not found
     }
+
+    public TreeNode delete(TreeNode rootNode, int data){
+        if(rootNode.data < data){
+            rootNode.rightNode = delete(rootNode.rightNode, data);
+        } else if (rootNode.data > data){
+            rootNode.leftNode = delete(rootNode.leftNode, data);
+        } else {
+            //case 1 - deleting a leaf node
+            if(rootNode.leftNode == null && rootNode.rightNode == null){
+                return null;
+            }
+
+            //case 2 - deleting a node with one child
+            if(rootNode.leftNode == null){
+                return rootNode.rightNode;
+            } else if(rootNode.rightNode == null){
+                return rootNode.leftNode;
+            }
+
+            //case 3 - deleting a node with two childs
+            TreeNode successor = findInOrderSuccessor(rootNode.rightNode);
+            rootNode.data = successor.data;
+            rootNode.rightNode = delete(rootNode.rightNode, successor.data);
+        }
+        return rootNode;
+    }
+
+    public TreeNode findInOrderSuccessor(TreeNode rootNode){
+        while(rootNode.leftNode != null){
+            rootNode = rootNode.leftNode;
+        }
+        return rootNode;
+    }
 }
