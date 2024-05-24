@@ -33,5 +33,8 @@ public class Main {
         binarySearchTree.inOrderTraversal(binarySearchTree.rootNode);
         System.out.println();
 
+        TreeNode delValue = binarySearchTree.delete(binarySearchTree.rootNode, 3);
+        System.out.println(delValue.data);
+
     }
 }
