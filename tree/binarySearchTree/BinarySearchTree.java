@@ -147,4 +147,20 @@ public class BinarySearchTree {
         }
         return rootNode;
     }
+
+    public void printInRange(TreeNode rootNode, int startRange, int endRange){
+        if(rootNode == null){
+            return;
+        }
+
+        if(rootNode.data >= startRange && rootNode.data <= endRange){
+            printInRange(rootNode.leftNode, startRange, endRange);
+            System.out.println(rootNode.data + " ");
+            printInRange(rootNode.rightNode, startRange, endRange);
+        } else if(rootNode.data < startRange){
+            printInRange(rootNode.leftNode, startRange, endRange);
+        } else {
+            printInRange(rootNode.rightNode, startRange, endRange);
+        }
+    }
 }
