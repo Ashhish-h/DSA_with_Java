@@ -12,6 +12,7 @@ public class Main {
         // BinaryTree binaryTree = new BinaryTree();
         // binaryTree.insert(scanner);
         // binaryTree.printTree();
+        scanner.close();
 
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         // TreeNode root = null;
@@ -30,11 +31,14 @@ public class Main {
             binarySearchTree.insert(arr[i]);
         }
 
-        binarySearchTree.inOrderTraversal(binarySearchTree.rootNode);
-        System.out.println();
+        // binarySearchTree.inOrderTraversal(binarySearchTree.rootNode);
+        // System.out.println();
 
-        TreeNode delValue = binarySearchTree.delete(binarySearchTree.rootNode, 3);
-        System.out.println(delValue.data);
+        // TreeNode delValue = binarySearchTree.delete(binarySearchTree.rootNode, 3);
+        // System.out.println(delValue.data);
+
+        binarySearchTree.printInRange(binarySearchTree.rootNode, 3, 7);
+        System.out.println();
 
     }
 }
