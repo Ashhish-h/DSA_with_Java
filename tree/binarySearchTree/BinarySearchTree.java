@@ -48,6 +48,10 @@ public class BinarySearchTree {
         } else return null;
     }
 
+    public boolean isEmpty(){
+        return rootNode == null;
+    }
+
     // public TreeNode insert(TreeNode root, int value){
     //     if(root == null){
     //         root = new TreeNode(value);
