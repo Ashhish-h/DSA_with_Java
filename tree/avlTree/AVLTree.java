@@ -107,7 +107,7 @@ public class AVLTree {
         return x;
     }
 
-    public static void preOrderTraversal(Node root){
+    public  void preOrderTraversal(Node root){
         if(root != null){
             System.out.print(root.data + " ");
             preOrderTraversal(root.leftNode);
