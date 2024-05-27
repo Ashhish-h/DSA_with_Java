@@ -72,7 +72,38 @@ public class AVLTree {
             return leftRotate(root);
         }
 
-        return root;
+        return root; 
 
+    }
+
+    public static Node leftRotate(Node x){
+        Node y = x.rightNode;
+        Node T2 = y.leftNode;
+
+        // Rotation
+        y.leftNode = x;
+        x.rightNode = T2;
+
+        // Update Height
+        x.height = Math.max(height(x.leftNode), height(x.rightNode)) + 1;
+        y.height = Math.max(height(y.leftNode), height(y.rightNode)) + 1;
+
+        //return new root
+        return y;
+    }
+
+    public static Node rightRotate(Node y){
+        Node x = y.leftNode;
+        Node T2 = x.rightNode;
+
+        // Rotation
+        x.rightNode = y;
+        y.leftNode = T2;
+
+        // Upadate Heights
+        y.height = Math.max(height(y.leftNode), height(y.rightNode)) + 1;
+        x.height = Math.max(height(x.leftNode), height(x.rightNode)) + 1;
+
+        return x;
     }
 }
