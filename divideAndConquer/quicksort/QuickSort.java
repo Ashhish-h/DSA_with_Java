@@ -15,7 +15,7 @@ public class QuickSort {
         int i = -1; // It will be used to swap elements that are smaller than the pivot with larger elements
         int pivot = arr[endIndex];
 
-        for(int j = 0; j < endIndex; j++){
+        for(int j = startIndex; j < endIndex; j++){
             if(arr[j] <= pivot){
                 i++;
                 int temp = arr[j];
