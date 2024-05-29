@@ -12,7 +12,7 @@ public class QuickSort {
     }
 
     public static int partition(int[] arr, int startIndex, int endIndex){
-        int i = -1; // It will be used to swap elements that are smaller than the pivot with larger elements
+        int i = startIndex - 1; // It will be used to swap elements that are smaller than the pivot with larger elements
         int pivot = arr[endIndex];
 
         for(int j = startIndex; j < endIndex; j++){
@@ -33,7 +33,7 @@ public class QuickSort {
 
     public static void print(int[] arr){
         for(int index = 0; index < arr.length; index++){
-            System.out.println(arr[index] + " ");
+            System.out.print(arr[index] + " ");
         }
         System.out.println();
     }
