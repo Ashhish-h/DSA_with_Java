@@ -30,4 +30,11 @@ public class QuickSort {
 
         return i; // It will return the index  of the pivot
     }
+
+    public static void print(int[] arr){
+        for(int index = 0; index < arr.length; index++){
+            System.out.println(arr[index] + " ");
+        }
+        System.out.println();
+    }
 }
