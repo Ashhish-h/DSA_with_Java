@@ -1,4 +1,4 @@
-package divideAndConquer;
+package divideAndConquer.mergesort;
 
 public class MergeSort{
     public static void mergeSort(int[] arr, int startIndex, int endIndex){
