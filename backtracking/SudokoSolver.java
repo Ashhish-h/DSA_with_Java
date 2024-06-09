@@ -14,7 +14,7 @@ class SudokuSolver {
             if (sudoku[row][i] == digit) return false;
         }
 
-        // for checking particular grids
+        // for checking particular grids inside the main sudoko grid
         int gridStartRow = (row / 3) * 3;
         int gridStartCol = (col / 3) * 3;
 
