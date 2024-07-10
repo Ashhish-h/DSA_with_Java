@@ -73,12 +73,12 @@ class Heap<T extends Comparable<T>>{
     }
 
     public ArrayList<T> heapSort() throws Exception {
-        ArrayList<T> list = new ArrayList<>();
+        ArrayList<T> sortedList = new ArrayList<>();
         
         while(!list.isEmpty()){
-            list.add(this.remove());
+            sortedList.add(this.remove());
         }
 
-        return list;
+        return sortedList;
     }
 }
