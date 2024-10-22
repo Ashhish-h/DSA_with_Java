@@ -132,6 +132,9 @@ public class HashMap<K, V>{
         return keys;
     }
 
+    public boolean isEmpty(){
+        return n == 0;
+    }
 
 
 }
