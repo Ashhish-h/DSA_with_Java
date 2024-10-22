@@ -90,5 +90,18 @@ public class HashMap<K, V>{
         return dataIndex != -1;
     }
 
+    public V get(K key) {
+        int bucketIndex = hashfunction(key);
+        int dataIndex = SearchInLL(key, bucketIndex);
+
+//        if(dataIndex != -1) {
+//            Node node = buckets[bucketIndex].get(dataIndex);
+//            return node.value;
+//        }
+//
+//        return null;
+        return dataIndex != -1 ? buckets[bucketIndex].get(dataIndex).value : null;
+    }
+
 
 }
