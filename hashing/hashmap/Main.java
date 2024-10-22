@@ -10,7 +10,10 @@ public class Main {
         boolean isFound = map.containsKey("aditya");
         System.out.println(isFound);
 
-        Integer value = map.get("Ashish");
+        int value = map.get("Ashish");
         System.out.println(value);
+
+        int val = map.remove("Abhishek");
+        System.out.println(val);
     }
 }
