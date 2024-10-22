@@ -16,5 +16,7 @@ public class Main {
 //        int val = map.remove("Abhishek");
 //        System.out.println(val);
         System.out.println(map.keySet());
+
+        System.out.println(map.isEmpty());
     }
 }
