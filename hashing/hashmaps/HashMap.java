@@ -1,5 +1,4 @@
-package hashing.hashmap;
-import java.security.Key;
+package hashing.hashmaps;
 import java.util.*;
 
 public class HashMap<K, V>{
@@ -85,7 +84,7 @@ public class HashMap<K, V>{
 
         double lambda = (double) n / N;
         if(lambda > 2.0) {
-            rehash();  // rehashing if hashmap has reached its threshold
+            rehash();  // rehashing if hashmaps has reached its threshold
         }
     }
 

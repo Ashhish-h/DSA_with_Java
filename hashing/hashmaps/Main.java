@@ -1,4 +1,4 @@
-package hashing.hashmap;
+package hashing.hashmaps;
 
 public class Main {
     public static void main(String[] args){
