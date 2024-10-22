@@ -7,6 +7,7 @@ public class Main {
         map.put("Abhishek", 8);
         map.put("aryan", 7);
 
-
+        boolean isFound = map.containsKey("charu");
+        System.out.println(isFound);
     }
 }
