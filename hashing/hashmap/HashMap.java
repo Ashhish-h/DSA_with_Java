@@ -2,6 +2,8 @@ package hashing.hashmap;
 import java.util.*;
 
 public class HashMap<K, V>{
+
+    // structure of node class
     private class Node {
         K key;
         V value;
@@ -11,6 +13,8 @@ public class HashMap<K, V>{
             this.value = value;
         }
     }
+
+
     private int n; // number of nodes in the HashMap.
     private int N; // size of the bucket
     private LinkedList<Node>[] buckets;  // Bucket to store the nodes,
@@ -102,6 +106,13 @@ public class HashMap<K, V>{
 //        return null;
         return dataIndex != -1 ? buckets[bucketIndex].get(dataIndex).value : null;
     }
+
+    public V remove(K key) {
+        int bucketIndex = hashfunction(key);
+        int dataIndex = SearchInLL(key, bucketIndex);
+        return dataIndex != -1 ? buckets[bucketIndex].remove(dataIndex).value : null;
+    }
+
 
 
 }
