@@ -13,7 +13,8 @@ public class Main {
         int value = map.get("Ashish");
         System.out.println(value);
 
-        int val = map.remove("Abhishek");
-        System.out.println(val);
+//        int val = map.remove("Abhishek");
+//        System.out.println(val);
+        System.out.println(map.keySet());
     }
 }
