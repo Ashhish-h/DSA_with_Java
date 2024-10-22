@@ -1,4 +1,5 @@
 package hashing.hashmap;
+import java.security.Key;
 import java.util.*;
 
 public class HashMap<K, V>{
@@ -110,7 +111,25 @@ public class HashMap<K, V>{
     public V remove(K key) {
         int bucketIndex = hashfunction(key);
         int dataIndex = SearchInLL(key, bucketIndex);
+        n--;
         return dataIndex != -1 ? buckets[bucketIndex].remove(dataIndex).value : null;
+    }
+
+    public ArrayList<K> keySet(){
+        ArrayList<K> keys = new ArrayList<>();
+
+//        for(int i = 0; i < buckets.length; i++) {
+//            for(Node node : buckets[i]) {
+//                keys.add(node.key);
+//            }
+//        }
+
+        for (LinkedList<Node> bucket : buckets) {
+            for (Node node : bucket) {
+                keys.add(node.key);
+            }
+        }
+        return keys;
     }
 
 
