@@ -11,7 +11,6 @@ public class HashMap<K, V>{
             this.value = value;
         }
     }
-
     private int n; // number of nodes in the HashMap.
     private int N; // size of the bucket
     private LinkedList<Node>[] buckets;  // Bucket to store the nodes,
@@ -81,8 +80,14 @@ public class HashMap<K, V>{
 
         double lambda = (double) n / N;
         if(lambda > 2.0) {
-            rehash();
+            rehash();  // rehashing if hashmap has reached its threshold
         }
+    }
+
+    public boolean containsKey(K key) {
+        int bucketIndex = hashfunction(key);
+        int dataIndex = SearchInLL(key, bucketIndex);
+        return dataIndex != -1;
     }
 
 
