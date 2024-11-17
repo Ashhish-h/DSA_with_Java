@@ -73,6 +73,7 @@ public class HashMap<K, V>{
         int bucketIndex = hashfunction(key); // to get the index of the array where we have to store the key (o to size - 1)
         int dataIndex = SearchInLL(key, bucketIndex); // to search if a key already exists or not, if not returns -1
 
+        
         if(dataIndex != -1) { // means the key is already present in the linked list so update its value.
             Node node = buckets[bucketIndex].get(dataIndex); // we are getting the node on which key is stored
             // node <- array[index on which the linked list is present].get(on which index of the linked list the key is present)
@@ -81,6 +82,8 @@ public class HashMap<K, V>{
             buckets[bucketIndex].add(new Node(key, value));
             n++;
         }
+
+        // checking the threshold, if there is a need for rehash or not.
 
         double lambda = (double) n / N;
         if(lambda > 2.0) {
